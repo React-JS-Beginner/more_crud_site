@@ -1,0 +1,11 @@
+.main-footer {
+  /* background-color: #0B114A; */
+  position: relative;
+  bottom: 0;
+}
+
+hr.new {
+  border: 1px solid grey;
+  width: 50%;
+  margin: auto;
+}
