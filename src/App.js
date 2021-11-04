@@ -8,9 +8,6 @@ import AddNewService from "./Components/AddNewService/AddNewService";
 import SignIn from "./Components/SignIn/SignIn";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
-import About from "./Components/About/About";
-import Destinations from "./Components/Destinations/Destinations";
-import Blogs from "./Components/Blogs/Blogs";
 import BookingService from "./Components/BookingService/BookingService";
 import Footer from "./Components/Footer/Footer";
 
@@ -18,54 +15,42 @@ function App() {
   return (
     <div>
       <AuthProvider>
-      <div className="page-container">
-        <div className="content-wrap">
-        <BrowserRouter>
-          <Header></Header>
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
+        <div className="page-container">
+          <div className="content-wrap">
+            <BrowserRouter>
+              <Header></Header>
+              <Switch>
+                <Route exact path="/">
+                  <Home></Home>
+                </Route>
+                <Route path="/home">
+                  <Home></Home>
+                </Route>
 
-            <Route path="/about">
-              <About></About>
-            </Route>
+                <PrivateRoute path="/services/:id">
+                  <BookingService></BookingService>
+                </PrivateRoute>
 
-            <Route path="/destinations">
-              <Destinations></Destinations>
-            </Route>
+                <PrivateRoute path="/myorders">
+                  <MyOrders></MyOrders>
+                </PrivateRoute>
 
-            <Route path="/blogs">
-              <Blogs></Blogs>
-            </Route>
+                <PrivateRoute path="/manageorders">
+                  <ManageAllServices></ManageAllServices>
+                </PrivateRoute>
 
-            <PrivateRoute path="/services/:id">
-              <BookingService></BookingService>
-            </PrivateRoute>
+                <PrivateRoute path="/addnewservice">
+                  <AddNewService></AddNewService>
+                </PrivateRoute>
 
-            <PrivateRoute path="/myorders">
-              <MyOrders></MyOrders>
-            </PrivateRoute>
-
-            <PrivateRoute path="/manageorders">
-              <ManageAllServices></ManageAllServices>
-            </PrivateRoute>
-
-            <PrivateRoute path="/addnewservice">
-              <AddNewService></AddNewService>
-            </PrivateRoute>
-
-            <Route path="/signin">
-              <SignIn></SignIn>
-            </Route>
-          </Switch>
-        </BrowserRouter>
+                <Route path="/signin">
+                  <SignIn></SignIn>
+                </Route>
+              </Switch>
+            </BrowserRouter>
+          </div>
+          <Footer></Footer>
         </div>
-        <Footer></Footer>
-      </div>
       </AuthProvider>
     </div>
   );

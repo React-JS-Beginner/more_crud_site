@@ -12,10 +12,10 @@ const Header = () => {
           <Navbar.Brand style={{lineHeight:'1'}} className="text-center text-uppercase text-white">
             <span className="d-block fs-3">
               {" "}
-              <strong style={{ color: "#EA3C23" }}>trip</strong> toe{" "}
+              <strong style={{ color: "#EA3C23" }}>crud</strong>{" "}
             </span>{" "}
             <span className="fs-6 d-block text-white text-uppercase">
-              adventure
+              operation
             </span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -28,30 +28,6 @@ const Header = () => {
                 to="/home"
               >
                 Home
-              </NavLink>
-
-              <NavLink
-                activeClassName="navs-active"
-                className="fs-6 navs me-3 text-decoration-none"
-                to="/about"
-              >
-                About
-              </NavLink>
-
-              <NavLink
-                activeClassName="navs-active"
-                className="fs-6 navs me-3 text-decoration-none"
-                to="/destinations"
-              >
-                Destinations
-              </NavLink>
-
-              <NavLink
-                activeClassName="navs-active"
-                className="fs-6 navs me-3 text-decoration-none"
-                to="/blogs"
-              >
-                Blogs
               </NavLink>
 
               <NavDropdown
