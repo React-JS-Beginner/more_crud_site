@@ -22,14 +22,12 @@ const BookingService = () => {
   //Booking FORM Submit
   const onSubmit = (data) => {
     console.log(data);
-    axios
-      .post("https://pure-inlet-54915.herokuapp.com/users", data)
-      .then((res) => {
-        // console.log(res);
-        if (res.data.insertedId) {
-          alert("Trip Package Booked Successfully!");
-        }
-      });
+    axios.post("http://localhost:5000/orders", data).then((res) => {
+      // console.log(res);
+      if (res.data.insertedId) {
+        alert("Trip Package Booked Successfully!");
+      }
+    });
   };
 
   return (
