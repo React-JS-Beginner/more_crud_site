@@ -6,7 +6,7 @@ const ManageAllServices = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://pure-inlet-54915.herokuapp.com/users")
+    fetch("http://localhost:5000/users")
       .then((res) => res.json())
       .then((data) => setUsers(data));
     // .then((data) => console.log(data));

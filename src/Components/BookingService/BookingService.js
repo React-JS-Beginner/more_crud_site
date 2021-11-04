@@ -14,7 +14,7 @@ const BookingService = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`https://pure-inlet-54915.herokuapp.com/services/${id}`)
+    fetch(`http://localhost:5000/services/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleService(data));
   }, []);

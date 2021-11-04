@@ -14,7 +14,7 @@ const Home = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://pure-inlet-54915.herokuapp.com/services")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
     // .then((data) => console.log(data));

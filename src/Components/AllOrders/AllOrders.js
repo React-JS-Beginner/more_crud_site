@@ -14,7 +14,7 @@ const AllOrders = (props) => {
 
   const deleteHandler = (id) => {
     console.log(id);
-    fetch(`https://pure-inlet-54915.herokuapp.com/users/${id}`, {
+    fetch(`http://localhost:5000/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const AllOrders = (props) => {
             <Button className="text-center btn-success me-1 w-50" size="sm">
               Approve
             </Button>
-                  
+
             <Button
               onClick={() => deleteHandler(_id)}
               className="text-center btn-danger ms-1 w-50"
@@ -58,7 +58,10 @@ const AllOrders = (props) => {
             </Button>
           </div>
         </Card.Body>
-        <Card.Footer style={{backgroundColor:'#e0e0eb'}} className="text-center">
+        <Card.Footer
+          style={{ backgroundColor: "#e0e0eb" }}
+          className="text-center"
+        >
           <small className="text-muted">{bookedServiceStatus}</small>
         </Card.Footer>
       </Card>

@@ -15,7 +15,7 @@ const Orders = (props) => {
 
   const deleteHandler = (id) => {
     console.log(id);
-    fetch(`https://pure-inlet-54915.herokuapp.com/users/${id}`, {
+    fetch(`http://localhost:5000/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
