@@ -10,7 +10,7 @@ const MyOrders = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('http://localhost:5000/orders')
       .then((res) => res.json())
       .then((data) => setUsers(data));
     // .then((data) => console.log(data))

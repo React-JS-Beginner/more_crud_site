@@ -23,8 +23,7 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-5 me-auto align-items-center">
               <NavLink
-                activeClassName="navs-active"
-                className="fs-6 navs me-3 text-decoration-none"
+                className="fs-6 text-white me-3 text-decoration-none"
                 to="/home"
               >
                 Home

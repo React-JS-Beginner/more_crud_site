@@ -14,7 +14,7 @@ const AllOrders = (props) => {
 
   const deleteHandler = (id) => {
     console.log(id);
-    fetch(`http://localhost:5000/users/${id}`, {
+    fetch(`http://localhost:5000/orders/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

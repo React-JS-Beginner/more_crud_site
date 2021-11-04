@@ -14,7 +14,7 @@ const BookingService = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`http://localhost:5000/packages/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleService(data));
   }, []);

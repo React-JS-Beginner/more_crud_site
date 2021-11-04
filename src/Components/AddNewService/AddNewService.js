@@ -16,9 +16,9 @@ const AddNewService = () => {
       .then((res) => {
         // console.log(res);
         if (res.data.insertedId) {
-          // alert("Service Addeded Successfully!");
+          // alert("Package Addeded Successfully!");
           reset();
-          setSuccess("Service Added Successfully!");
+          setSuccess("Package Added Successfully!");
         }
       });
   };
