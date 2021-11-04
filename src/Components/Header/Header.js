@@ -9,7 +9,10 @@ const Header = () => {
     <div className="py-1 bg-dark">
       <Navbar collapseOnSelect expand="lg">
         <Container>
-          <Navbar.Brand style={{lineHeight:'1'}} className="text-center text-uppercase text-white">
+          <Navbar.Brand
+            style={{ lineHeight: "1" }}
+            className="text-center text-uppercase text-white"
+          >
             <span className="d-block fs-3">
               {" "}
               <strong style={{ color: "#EA3C23" }}>crud</strong>{" "}
@@ -30,9 +33,7 @@ const Header = () => {
               </NavLink>
 
               <NavDropdown
-                title={
-                  <span className="fs-6 text-white my-auto">Admin</span>
-                }
+                title={<span className="fs-6 text-white my-auto">Admin</span>}
                 id="collasible-nav-dropdown"
                 className="dropdown"
               >
@@ -62,7 +63,7 @@ const Header = () => {
                     className="dropnav me-3 text-decoration-none"
                     to="/addnewservice"
                   >
-                    Add New Service
+                    Add New Package
                   </NavLink>
                 </NavDropdown.Item>
               </NavDropdown>

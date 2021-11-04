@@ -11,16 +11,14 @@ const AddNewService = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios
-      .post("https://pure-inlet-54915.herokuapp.com/services", data)
-      .then((res) => {
-        // console.log(res);
-        if (res.data.insertedId) {
-          // alert("Package Addeded Successfully!");
-          reset();
-          setSuccess("Package Added Successfully!");
-        }
-      });
+    axios.post("http://localhost:5000/packages", data).then((res) => {
+      // console.log(res);
+      if (res.data.insertedId) {
+        // alert("Package Addeded Successfully!");
+        reset();
+        setSuccess("Package Added Successfully!");
+      }
+    });
   };
 
   //Remove Success Text
@@ -79,7 +77,9 @@ const AddNewService = () => {
           ADD
         </Button>
       </Form>
-      <p className="text-center text-white text-uppercase mt-4 fs-4">{success}</p>
+      <p className="text-center text-white text-uppercase mt-4 fs-4">
+        {success}
+      </p>
     </div>
   );
 };
