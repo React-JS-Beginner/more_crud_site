@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
-// fetch("http://localhost:5000/orders")
 
 const ManageAllServices = () => {
   const [orders, setOrders] = useState([]);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:5000/orders")
@@ -32,6 +32,15 @@ const ManageAllServices = () => {
         });
     }
   };
+
+  //statusOnChange  
+  const handleStatus = (e) => {
+    setStatus(e.target.value);
+  };
+
+  //Update Status
+ 
+
   return (
     <Container className="my-5 pb-5">
       <h3 className="text-center text-dark mb-2 text-uppercase">
@@ -60,30 +69,21 @@ const ManageAllServices = () => {
                 </Card.Text>
 
                 <div className="d-flex">
-                  {/* Approve Form */}
-                  <form 
-                  // onSubmit={updateContactHandler}
-                  >
-                      {/* Name */}
-                      <input
-                        className="w-50 d-none"
-                        // ref={nameRef}
-                        //onClick={successClearHandler}
-                        //onChange={nameChangeHandler}                        
-                        defaultValue='Approved'
-                      />
-                      {/* Button */}
-
-                      <Button
-                        className="text-center btn-success me-1"
-                        size="sm"
-                      >
-                        Approve
-                      </Button>
-                      {/* Button */}
-                  </form>
-                  {/* Approve Form */}
-
+                    {/*bookedServiceStatus*/}
+                    <input 
+                    className="w-25"
+                    onChange={handleStatus}
+                    type="text"
+                    defaultValue="Approved"
+                     />
+                    {/* Button */}
+                    <Button
+                      className="text-center btn-success me-1"
+                      size="sm"
+                    >
+                      Approve
+                    </Button>
+                    {/* Button */}
                   <Button
                     onClick={() => deleteHandler(order._id)}
                     className="text-center btn-danger ms-1"
