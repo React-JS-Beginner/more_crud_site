@@ -23,9 +23,6 @@ const MyOrders = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        /* if (data.deletedCount){
-
-        } */
         if (data.deletedCount > 0) {
           const remainingOrders = orders.filter((order) => order._id !== id);
           console.log(remainingOrders);
