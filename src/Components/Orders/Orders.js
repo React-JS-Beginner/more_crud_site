@@ -9,28 +9,27 @@ const Orders = (props) => {
     singleServiceName,
     singleServiceImg,
     singleServiceCost,
-  } = props.user;
+  } = props.order;
 
-  const [orders, setOrders] = useState([]);
+  // const [orders, setOrders] = useState([]);
+  const [control, setControl] = useState(false);
 
   const deleteHandler = (id) => {
     console.log(id);
     fetch(`http://localhost:5000/orders/${id}`, {
       method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.deletedCount > 0) {
+        if (data.deletedCount){
+
+        }
+        /* if (data.deletedCount > 0) {
           const remainingOrders = orders.filter((order) => order._id !== id);
           console.log(remainingOrders);
           setOrders(remainingOrders);
-          window.location.reload();
-          return false;
-        }
+        } */
       });
   };
 

@@ -31,17 +31,10 @@ const BookingService = () => {
   };
 
   return (
-    <div className="single-banner">
-      <div>
-        <h3 className="text-center text-white mt-5 mb-5 text-uppercase">
-          hey ! {user.displayName} <br /> thanks for choosing our{" "}
-          <span style={{ color: "#ea3c23" }}>trip</span> package
-        </h3>
-      </div>
-
-      <div className="d-flex px-5">
-        <Container className="package w-50 p-5 bg-single shadow radius">
-          <div className="d-flex">
+    <div>
+      <div className="d-flex align-items-baseline px-5">
+        <Container className="w-50 m-5 p-5 shadow radius">
+          <div className="d-flex align-items-center">
             <div className="me-5">
               <div>
                 <h3>{singleService.serviceName}</h3>
@@ -75,7 +68,7 @@ const BookingService = () => {
         </Container>
 
         <Form
-          className="d-flex flex-column mt-5 w-25 mx-auto"
+          className="d-flex flex-column w-25 mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
@@ -126,7 +119,7 @@ const BookingService = () => {
           />
 
           <Button variant="danger" type="submit">
-            Book
+            Book Now
           </Button>
         </Form>
       </div>
