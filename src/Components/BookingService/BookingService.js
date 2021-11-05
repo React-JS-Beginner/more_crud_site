@@ -25,7 +25,7 @@ const BookingService = () => {
     axios.post("http://localhost:5000/orders", data).then((res) => {
       // console.log(res);
       if (res.data.insertedId) {
-        alert("Trip Package Booked Successfully!");
+        alert("Package Booked Successfully!");
       }
     });
   };

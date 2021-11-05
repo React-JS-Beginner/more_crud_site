@@ -54,7 +54,7 @@ const MyOrders = () => {
       </div>
       <Row className="g-5">
         {orders.map((order) => (
-          <Col xl={3} lg={3}>
+          <Col key={order._id} xl={3} lg={3}>
             <Card>
               <Card.Img variant="top" src={order.singleServiceImg} />
               <Card.Body className="text-center">

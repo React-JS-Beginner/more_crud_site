@@ -19,19 +19,18 @@ const ManageAllServices = () => {
     );
     if (proceed) {
       fetch(`http://localhost:5000/orders/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.deletedCount > 0) {
-          const remainingOrders = orders.filter((order) => order._id !== id);
-          console.log(remainingOrders);
-          setOrders(remainingOrders);
-        }
-      });
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount > 0) {
+            const remainingOrders = orders.filter((order) => order._id !== id);
+            console.log(remainingOrders);
+            setOrders(remainingOrders);
+          }
+        });
     }
-    
   };
   return (
     <Container className="my-5 pb-5">
@@ -44,7 +43,7 @@ const ManageAllServices = () => {
       </p>
       <Row className="g-4">
         {orders.map((order) => (
-          <Col xl={3} lg={3}>
+          <Col key={order._id} xl={3} lg={3}>
             <Card>
               <Card.Img variant="top" src={order.singleServiceImg} />
               <Card.Body className="text-center">
@@ -61,16 +60,33 @@ const ManageAllServices = () => {
                 </Card.Text>
 
                 <div className="d-flex">
-                  <Button
-                    className="text-center btn-success me-1 w-50"
-                    size="sm"
+                  {/* Approve Form */}
+                  <form 
+                  // onSubmit={updateContactHandler}
                   >
-                    Approve
-                  </Button>
+                      {/* Name */}
+                      <input
+                        className="w-50 d-none"
+                        // ref={nameRef}
+                        //onClick={successClearHandler}
+                        //onChange={nameChangeHandler}                        
+                        defaultValue='Approved'
+                      />
+                      {/* Button */}
+
+                      <Button
+                        className="text-center btn-success me-1"
+                        size="sm"
+                      >
+                        Approve
+                      </Button>
+                      {/* Button */}
+                  </form>
+                  {/* Approve Form */}
 
                   <Button
                     onClick={() => deleteHandler(order._id)}
-                    className="text-center btn-danger ms-1 w-50"
+                    className="text-center btn-danger ms-1"
                     size="sm"
                   >
                     Cancel
