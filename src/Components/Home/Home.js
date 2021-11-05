@@ -8,7 +8,7 @@ import {
   InputGroup,
   Row,
 } from "react-bootstrap";
-import HomeServices from "../HomeServices/HomeServices";
+import AllPackages from "../AllPackages/AllPackages";
 import "./Home.css";
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -30,7 +30,7 @@ const Home = () => {
       <Container className="w-100 mb-5">
         <Row className="g-5">
           {services.map((service) => (
-            <HomeServices key={service._id} service={service}></HomeServices>
+            <AllPackages key={service._id} service={service}></AllPackages>
           ))}
         </Row>
       </Container>

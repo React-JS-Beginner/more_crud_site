@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-const AddNewService = () => {
+const AddNewPackage = () => {
   const { register, handleSubmit, reset } = useForm();
   const [success, setSuccess] = useState();
 
@@ -83,4 +83,4 @@ const AddNewService = () => {
   );
 };
 
-export default AddNewService;
+export default AddNewPackage;

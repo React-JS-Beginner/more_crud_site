@@ -3,8 +3,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Header from "./Components/Header/Header";
 import MyOrders from "./Components/MyOrders/MyOrders";
-import ManageAllServices from "./Components/ManageAllServices/ManageAllServices";
-import AddNewService from "./Components/AddNewService/AddNewService";
+import ManageAllOrders from "./Components/ManageAllOrders/ManageAllOrders";
+import AddNewPackage from "./Components/AddNewPackage/AddNewPackage";
 import SignIn from "./Components/SignIn/SignIn";
 import AuthProvider from "./Context/AuthProvider";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
@@ -36,11 +36,11 @@ function App() {
                 </PrivateRoute>
 
                 <PrivateRoute path="/manageorders">
-                  <ManageAllServices></ManageAllServices>
+                  <ManageAllOrders></ManageAllOrders>
                 </PrivateRoute>
 
-                <PrivateRoute path="/addnewservice">
-                  <AddNewService></AddNewService>
+                <PrivateRoute path="/addnewpackage">
+                  <AddNewPackage></AddNewPackage>
                 </PrivateRoute>
 
                 <Route path="/signin">

@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const HomeServices = (props) => {
+const AllPackages = (props) => {
   const { _id, serviceName, serviceImg, serviceTime, serviceCost } =
     props.service;
   return (
@@ -39,4 +39,4 @@ const HomeServices = (props) => {
   );
 };
 
-export default HomeServices;
+export default AllPackages;

@@ -61,7 +61,7 @@ const Header = () => {
                   <NavLink
                     activeClassName="dropnav-active"
                     className="dropnav me-3 text-decoration-none"
-                    to="/addnewservice"
+                    to="/addnewpackage"
                   >
                     Add New Package
                   </NavLink>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
 
-const ManageAllServices = () => {
+const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
   const [status, setStatus] = useState("");
 
@@ -109,4 +109,4 @@ const ManageAllServices = () => {
   );
 };
 
-export default ManageAllServices;
+export default ManageAllOrders;
