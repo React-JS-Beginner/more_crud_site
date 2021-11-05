@@ -3,7 +3,6 @@ import React from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import "./AddNewService.css";
 
 const AddNewService = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -26,9 +25,9 @@ const AddNewService = () => {
     setSuccess("");
   };
   return (
-    <div className="pt-5 banner-add">
-      <h3 className="text-center text-white mb-5 text-uppercase">
-        add a new <span style={{ color: "#ea3c23" }}>trip</span> package
+    <div className="pt-5">
+      <h3 className="text-center text-dark mb-5 text-uppercase">
+        add a new <span style={{ color: "#ea3c23" }}>package</span> 
       </h3>
 
       <Form
@@ -77,7 +76,7 @@ const AddNewService = () => {
           ADD
         </Button>
       </Form>
-      <p className="text-center text-white text-uppercase mt-4 fs-4">
+      <p className="text-center text-white text-uppercase mt-4 mb-5 pb-5 fs-4">
         {success}
       </p>
     </div>
