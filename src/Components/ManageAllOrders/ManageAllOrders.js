@@ -4,21 +4,50 @@ import { Card, Col, Container, Row, Button } from "react-bootstrap";
 const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
   const [status, setStatus] = useState("");
+  const [control, setControl] = useState(false);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/orders")
+  /* useEffect(() => {
+    fetch("http://localhost:5000/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
     // .then((data) => console.log(data))
-  }, []);
+  }, []); */
 
+  //statusOnChange
+  const handleStatus = (e) => {
+    setStatus(e.target.value);
+  };
+  console.log(status);
+  useEffect(() => {
+    fetch("http://localhost:5000/allorders")
+      .then((res) => res.json())
+      .then((data) => setOrders(data));
+  }, [control]);
+
+  //Update Status
+  const handleUpdate = (id) => {
+    fetch(`http://localhost:5000/updateStatus/${id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ status }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.matchedCount) {
+          setControl(!control);
+        }
+      });
+  };
+
+  //Delete Orders
   const deleteHandler = (id) => {
     console.log(id);
     const proceed = window.confirm(
       "Are you sure, you want to delete this package?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`http://localhost:5000/allorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -32,14 +61,6 @@ const ManageAllOrders = () => {
         });
     }
   };
-
-  //statusOnChange  
-  const handleStatus = (e) => {
-    setStatus(e.target.value);
-  };
-
-  //Update Status
- 
 
   return (
     <Container className="my-5 pb-5">
@@ -69,24 +90,24 @@ const ManageAllOrders = () => {
                 </Card.Text>
 
                 <div className="d-flex">
-                    {/*bookedServiceStatus*/}
-                    <input 
+                  {/*bookedServiceStatus*/}
+                  <input
                     className="w-25"
                     onChange={handleStatus}
-                    type="text"
                     defaultValue="Approved"
-                     />
-                    {/* Button */}
-                    <Button
-                      className="text-center btn-success me-1"
-                      size="sm"
-                    >
-                      Approve
-                    </Button>
-                    {/* Button */}
+                  />
+                  {/* Button */}
+                  <Button
+                    className="text-center btn-success me-1 w-50"
+                    size="sm"
+                    onClick={() => handleUpdate(order._id)}
+                  >
+                    Approve
+                  </Button>
+                  {/* Button */}
                   <Button
                     onClick={() => deleteHandler(order._id)}
-                    className="text-center btn-danger ms-1"
+                    className="text-center btn-danger ms-1 w-50"
                     size="sm"
                   >
                     Cancel
