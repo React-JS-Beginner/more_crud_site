@@ -92,9 +92,9 @@ const ManageAllOrders = () => {
                 <div className="d-flex">
                   {/*bookedServiceStatus*/}
                   <input
-                    className="w-25"
-                    onBlurCapture={handleStatus}
-                    defaultValue="Approved"
+                    className="w-25 d-none"
+                    onChange={handleStatus}
+                    value="Approve"
                   />
                   {/* Button */}
                   <Button

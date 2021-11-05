@@ -5,8 +5,8 @@ import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 
 const MyOrders = () => {
-  const { user } = useAuth();
   const [orders, setOrders] = useState([]);
+  const { user } = useAuth();
 
   useEffect(() => {
     fetch(`http://localhost:5000/orders?email=${user.email}`)
@@ -67,7 +67,7 @@ const MyOrders = () => {
                 <span className="fs-3">{order.ButtonsingleServiceCost}</span>
                 <Card.Text>
                   BOOKED BY <br /> <i className="fas fa-user"></i>{" "}
-                  {order.userName}{" "}
+                  {order.userName} : {order.userEmail}
                 </Card.Text>
                 <Button
                   onClick={() => deleteHandler(order._id)}
