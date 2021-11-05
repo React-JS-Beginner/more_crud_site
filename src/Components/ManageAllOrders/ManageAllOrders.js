@@ -93,7 +93,7 @@ const ManageAllOrders = () => {
                   {/*bookedServiceStatus*/}
                   <input
                     className="w-25"
-                    onChange={handleStatus}
+                    onBlurCapture={handleStatus}
                     defaultValue="Approved"
                   />
                   {/* Button */}
