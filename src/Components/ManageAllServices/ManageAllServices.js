@@ -14,7 +14,11 @@ const ManageAllServices = () => {
 
   const deleteHandler = (id) => {
     console.log(id);
-    fetch(`http://localhost:5000/orders/${id}`, {
+    const proceed = window.confirm(
+      "Are you sure, you want to delete this package?"
+    );
+    if (proceed) {
+      fetch(`http://localhost:5000/orders/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -26,6 +30,8 @@ const ManageAllServices = () => {
           setOrders(remainingOrders);
         }
       });
+    }
+    
   };
   return (
     <Container className="my-5 pb-5">
