@@ -47,10 +47,10 @@ const MyOrders = () => {
         </h2>
       </div>
       <div>
-      <p className="fs-4 text-center text-dark mb-5 text-uppercase">
-        total <strong style={{ color: "#ea3c23" }}>{orders.length}</strong>{" "}
-        orders
-      </p>
+        <p className="fs-4 text-center text-dark mb-5 text-uppercase">
+          total <strong style={{ color: "#ea3c23" }}>{orders.length}</strong>{" "}
+          orders
+        </p>
       </div>
       <Row className="g-5">
         {orders.map((order) => (
@@ -67,7 +67,9 @@ const MyOrders = () => {
                 <span className="fs-3">{order.ButtonsingleServiceCost}</span>
                 <Card.Text>
                   BOOKED BY <br /> <i className="fas fa-user"></i>{" "}
-                  {order.userName} : {order.userEmail}
+                  {order.userName}
+                  <br />
+                  <span className="text-danger">{order.userEmail}</span>
                 </Card.Text>
                 <Button
                   onClick={() => deleteHandler(order._id)}

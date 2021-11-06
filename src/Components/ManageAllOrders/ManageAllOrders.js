@@ -6,30 +6,29 @@ const ManageAllOrders = () => {
   const [status, setStatus] = useState("");
   const [control, setControl] = useState(false);
 
-  /* useEffect(() => {
-    fetch("http://localhost:5000/allorders")
-      .then((res) => res.json())
-      .then((data) => setOrders(data));
-    // .then((data) => console.log(data))
-  }, []); */
-
-  //statusOnChange
-  const handleStatus = (e) => {
-    setStatus(e.target.value);
-  };
-  console.log(status);
   useEffect(() => {
     fetch("http://localhost:5000/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [control]);
 
+  
+  //statusOnChange
+  const handleStatus = (e) => {
+    setStatus(e.target.value);
+    /* 
+    const updatestatus = e.target.value;
+    const updatedstatus = { bookedServiceStatus: updatestatus };    
+    setStatus(updatedstatus); 
+    */
+  };  
+
   //Update Status
   const handleUpdate = (id) => {
     fetch(`http://localhost:5000/updateStatus/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ status }),
+      body: JSON.stringify({status}),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -89,16 +88,18 @@ const ManageAllOrders = () => {
                   {order.userName}{" "}
                 </Card.Text>
 
-                <div className="d-flex">
+                <div className="d-flex flex-column align-items-center">
                   {/*bookedServiceStatus*/}
                   <input
-                    className="w-25 d-none"
+                    className="m-2 px-3"
                     onChange={handleStatus}
-                    value="Approve"
+                    // value="Approve"
+                    placeholder='Type Approved'
                   />
                   {/* Button */}
                   <Button
-                    className="text-center btn-success me-1 w-50"
+                    // className="text-center btn-success me-1 w-50"
+                    className="text-center btn-success w-50"
                     size="sm"
                     onClick={() => handleUpdate(order._id)}
                   >
@@ -107,7 +108,8 @@ const ManageAllOrders = () => {
                   {/* Button */}
                   <Button
                     onClick={() => deleteHandler(order._id)}
-                    className="text-center btn-danger ms-1 w-50"
+                    // className="text-center btn-danger ms-1 w-50"
+                    className="text-center btn-danger w-50"
                     size="sm"
                   >
                     Cancel
