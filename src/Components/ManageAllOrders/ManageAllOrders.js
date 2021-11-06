@@ -3,7 +3,8 @@ import { Card, Col, Container, Row, Button } from "react-bootstrap";
 
 const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
-  const [status, setStatus] = useState("");
+  // const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("Approved");
   const [control, setControl] = useState(false);
 
   useEffect(() => {
@@ -12,13 +13,9 @@ const ManageAllOrders = () => {
       .then((data) => setOrders(data));
   }, [control]);
 
-  //statusOnChange
-  const handleStatus = (e) => {
-    setStatus(e.target.value);
-  };
-
   //Update Status
   const handleUpdate = (id) => {
+    setStatus(status);
     fetch(`http://localhost:5000/updateStatus/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
@@ -81,37 +78,25 @@ const ManageAllOrders = () => {
                   BOOKED BY <br /> <i className="fas fa-user"></i>{" "}
                   {order.userName}{" "}
                 </Card.Text>
-
-                <div className="d-flex flex-column align-items-center">
-                  {/*bookedServiceStatus*/}
-
-                  <input
-                    className="m-2 px-3"
-                    onBlur={handleStatus}
-                    // defaultValue="pens"
-                    defaultValue="apps"
-                    // placeholder='Type Approved'
-                  />
-
-                  {/* Button */}
+                {/* Button */}
+                <div className="d-flex">
                   <Button
-                    // className="text-center btn-success me-1 w-50"
-                    className="text-center btn-success w-50"
+                    className="text-center btn-success me-1 w-50"
                     size="sm"
                     onClick={() => handleUpdate(order._id)}
                   >
                     Approve
                   </Button>
-                  {/* Button */}
+
                   <Button
                     onClick={() => deleteHandler(order._id)}
-                    // className="text-center btn-danger ms-1 w-50"
-                    className="text-center btn-danger w-50"
+                    className="text-center btn-danger ms-1 w-50"
                     size="sm"
                   >
                     Cancel
                   </Button>
                 </div>
+                {/* Button */}
               </Card.Body>
               <Card.Footer
                 style={{ backgroundColor: "#e0e0eb" }}
