@@ -22,7 +22,7 @@ const BookingService = () => {
   //Booking FORM Submit
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/orders", data).then((res) => {
+    axios.post("http://localhost:5000/allorders", data).then((res) => {
       // console.log(res);
       if (res.data.insertedId) {
         alert("Package Booked Successfully!");

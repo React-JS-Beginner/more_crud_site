@@ -9,7 +9,7 @@ const MyOrders = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`http://localhost:5000/myorders?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
     // .then((data) => console.log(data))
@@ -21,7 +21,7 @@ const MyOrders = () => {
       "Are you sure, you want to delete this package?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`http://localhost:5000/myorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
