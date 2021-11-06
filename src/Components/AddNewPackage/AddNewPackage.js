@@ -10,14 +10,16 @@ const AddNewPackage = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/packages", data).then((res) => {
-      // console.log(res);
-      if (res.data.insertedId) {
-        // alert("Package Addeded Successfully!");
-        reset();
-        setSuccess("Package Added Successfully!");
-      }
-    });
+    axios
+      .post("https://boiling-anchorage-22873.herokuapp.com/packages", data)
+      .then((res) => {
+        // console.log(res);
+        if (res.data.insertedId) {
+          // alert("Package Addeded Successfully!");
+          reset();
+          setSuccess("Package Added Successfully!");
+        }
+      });
   };
 
   //Remove Success Text
@@ -27,7 +29,7 @@ const AddNewPackage = () => {
   return (
     <div className="pt-5">
       <h3 className="text-center text-dark mb-5 text-uppercase">
-        add a new <span style={{ color: "#ea3c23" }}>package</span> 
+        add a new <span style={{ color: "#ea3c23" }}>package</span>
       </h3>
 
       <Form

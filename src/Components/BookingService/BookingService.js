@@ -14,7 +14,7 @@ const BookingService = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/packages/${id}`)
+    fetch(`https://boiling-anchorage-22873.herokuapp.com/packages/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleService(data));
   }, []);
@@ -22,12 +22,14 @@ const BookingService = () => {
   //Booking FORM Submit
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/allorders", data).then((res) => {
-      // console.log(res);
-      if (res.data.insertedId) {
-        alert("Package Booked Successfully!");
-      }
-    });
+    axios
+      .post("https://boiling-anchorage-22873.herokuapp.com/allorders", data)
+      .then((res) => {
+        // console.log(res);
+        if (res.data.insertedId) {
+          alert("Package Booked Successfully!");
+        }
+      });
   };
 
   return (

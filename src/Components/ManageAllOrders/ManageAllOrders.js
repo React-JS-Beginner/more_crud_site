@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allorders")
+    fetch("https://boiling-anchorage-22873.herokuapp.com/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [reload]);
@@ -16,7 +16,7 @@ const ManageAllOrders = () => {
   //Update Status
   const handleUpdate = (id) => {
     setStatus(status);
-    fetch(`http://localhost:5000/updateStatus/${id}`, {
+    fetch(`https://boiling-anchorage-22873.herokuapp.com/updateStatus/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ status }),
@@ -37,7 +37,7 @@ const ManageAllOrders = () => {
       "Are you sure, you want to delete this package?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/allorders/${id}`, {
+      fetch(`https://boiling-anchorage-22873.herokuapp.com/allorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -103,9 +103,7 @@ const ManageAllOrders = () => {
                 // style={{ backgroundColor: "#98AFC7" }}
                 className="text-center bg-white"
               >
-                <small className="text-dark">
-                  {order.bookedServiceStatus}
-                </small>
+                <small className="text-dark">{order.bookedServiceStatus}</small>
               </Card.Footer>
             </Card>
           </Col>
