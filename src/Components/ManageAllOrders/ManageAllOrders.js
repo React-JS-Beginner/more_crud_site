@@ -5,13 +5,13 @@ const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
   // const [status, setStatus] = useState("");
   const [status, setStatus] = useState("Approved");
-  const [control, setControl] = useState(false);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:5000/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, [control]);
+  }, [reload]);
 
   //Update Status
   const handleUpdate = (id) => {
@@ -25,7 +25,7 @@ const ManageAllOrders = () => {
       .then((data) => {
         console.log(data);
         if (data.matchedCount) {
-          setControl(!control);
+          setReload(!reload);
         }
       });
   };
@@ -99,10 +99,11 @@ const ManageAllOrders = () => {
                 {/* Button */}
               </Card.Body>
               <Card.Footer
-                style={{ backgroundColor: "#e0e0eb" }}
-                className="text-center"
+                // style={{ backgroundColor: "#e0e0eb" }}
+                // style={{ backgroundColor: "#98AFC7" }}
+                className="text-center bg-white"
               >
-                <small className="text-muted">
+                <small className="text-dark">
                   {order.bookedServiceStatus}
                 </small>
               </Card.Footer>
