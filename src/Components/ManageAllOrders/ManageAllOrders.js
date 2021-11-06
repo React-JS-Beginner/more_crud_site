@@ -12,23 +12,17 @@ const ManageAllOrders = () => {
       .then((data) => setOrders(data));
   }, [control]);
 
-  
   //statusOnChange
   const handleStatus = (e) => {
     setStatus(e.target.value);
-    /* 
-    const updatestatus = e.target.value;
-    const updatedstatus = { bookedServiceStatus: updatestatus };    
-    setStatus(updatedstatus); 
-    */
-  };  
+  };
 
   //Update Status
   const handleUpdate = (id) => {
     fetch(`http://localhost:5000/updateStatus/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({status}),
+      body: JSON.stringify({ status }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -90,12 +84,15 @@ const ManageAllOrders = () => {
 
                 <div className="d-flex flex-column align-items-center">
                   {/*bookedServiceStatus*/}
+
                   <input
                     className="m-2 px-3"
-                    onChange={handleStatus}
-                    // value="Approve"
-                    placeholder='Type Approved'
+                    onBlur={handleStatus}
+                    // defaultValue="pens"
+                    defaultValue="apps"
+                    // placeholder='Type Approved'
                   />
+
                   {/* Button */}
                   <Button
                     // className="text-center btn-success me-1 w-50"

@@ -1,13 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import {
-  Button,
-  Container,
-  FormControl,
-  InputGroup,
-  Row,
-} from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import AllPackages from "../AllPackages/AllPackages";
 import "./Home.css";
 const Home = () => {
@@ -21,7 +15,6 @@ const Home = () => {
   }, []);
   return (
     <div className="pb-4">
-      
       <div className="mt-5 mb-5">
         <h2 className="mt-3 text-dark text-center text-uppercase">
           ALL packages
