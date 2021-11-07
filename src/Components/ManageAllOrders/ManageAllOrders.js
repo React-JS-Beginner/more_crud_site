@@ -3,10 +3,9 @@ import { Card, Col, Container, Row, Button } from "react-bootstrap";
 
 const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
-  // const [status, setStatus] = useState("");
   const [status, setStatus] = useState("Approved");
   const [reload, setReload] = useState(false);
-  const [disable, setDisable] = React.useState(false);
+  // const [disable, setDisable] = React.useState(false);
 
   useEffect(() => {
     fetch("https://boiling-anchorage-22873.herokuapp.com/allorders")
@@ -34,7 +33,7 @@ const ManageAllOrders = () => {
           console.log(data);
           if (data.matchedCount) {
             setReload(!reload);
-            setDisable(true);
+            // setDisable(true);
           }
         });
     }
@@ -94,7 +93,7 @@ const ManageAllOrders = () => {
                     className="text-center btn-success me-1 w-50"
                     size="sm"
                     onClick={() => handleUpdate(order._id)}
-                    disabled={disable}
+                    // disabled={disable}
                   >
                     Approve
                   </Button>
