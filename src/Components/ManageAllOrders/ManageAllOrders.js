@@ -26,6 +26,7 @@ const ManageAllOrders = () => {
         console.log(data);
         if (data.matchedCount) {
           setReload(!reload);
+          alert("Order Approved Successfully !");
         }
       });
   };
