@@ -15,20 +15,27 @@ const ManageAllOrders = () => {
 
   //Update Status
   const handleUpdate = (id) => {
-    setStatus(status);
-    fetch(`https://boiling-anchorage-22873.herokuapp.com/updateStatus/${id}`, {
-      method: "PUT",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ status }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.matchedCount) {
-          setReload(!reload);
-          alert("Order Approved Successfully !");
+    const proceed = window.confirm(
+      "Are you sure, you want to approve this package?"
+    );
+    if (proceed) {
+      setStatus(status);
+      fetch(
+        `https://boiling-anchorage-22873.herokuapp.com/updateStatus/${id}`,
+        {
+          method: "PUT",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ status }),
         }
-      });
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.matchedCount) {
+            setReload(!reload);
+          }
+        });
+    }
   };
 
   //Delete Orders
