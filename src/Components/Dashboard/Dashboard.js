@@ -3,9 +3,14 @@ import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
-    <div>
-      <p className="dashboard text-center p-4 text-uppercase">DashBoard</p>
-    </div>
+    <>
+      <div className="dashboard pt-4">
+        <span className="text-uppercase">
+          DashBoard
+        </span>
+      </div>
+      <hr class="new" />
+    </>
   );
 };
 

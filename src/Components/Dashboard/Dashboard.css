@@ -1,0 +1,15 @@
+.dashboard {
+  font-size: 30px;
+  color: #c7ad8b;
+  text-align: center;
+}
+
+hr.new {
+  border: 1px solid #c7ad8b;
+  width: 50%;
+}
+
+/* //////////////////// Media Queries ///////////////////// */
+
+@media all and (max-width: 688px) {
+}
