@@ -31,6 +31,12 @@ const Header = () => {
               >
                 Home
               </NavLink>
+              <NavLink
+                className="fs-6 text-white me-3 text-decoration-none"
+                to="/dashboard"
+              >
+                Dashboard
+              </NavLink>
 
               <NavDropdown
                 title={<span className="fs-6 text-white my-auto">Admin</span>}

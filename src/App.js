@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import Header from "./Components/Header/Header";
 import MyOrders from "./Components/MyOrders/MyOrders";
 import ManageAllOrders from "./Components/ManageAllOrders/ManageAllOrders";
@@ -25,6 +26,9 @@ function App() {
                 </Route>
                 <Route path="/home">
                   <Home></Home>
+                </Route>
+                <Route path="/dashboard">
+                  <Dashboard></Dashboard>
                 </Route>
 
                 <PrivateRoute path="/services/:id">

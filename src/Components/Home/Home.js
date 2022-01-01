@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import AllPackages from "../AllPackages/AllPackages";
+import DatePicker from "./DatePicker/DatePicker";
 import "./Home.css";
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -15,6 +16,9 @@ const Home = () => {
   }, []);
   return (
     <div className="pb-4">
+      <Container>
+        <DatePicker></DatePicker>
+      </Container>
       <div className="mt-5 mb-5">
         <h2 className="mt-3 text-dark text-center text-uppercase">
           ALL packages
