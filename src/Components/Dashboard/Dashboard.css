@@ -27,11 +27,11 @@ hr.new {
   display: flex;
   align-items: center;
 }
-.dashboard:hover {
-  color: #ffffff;
+.dashboard-navText:hover {
+  color: #cd4649;
 }
-.dashboard-active {
-  color: #ffffff;
+.dashboard-navText-active {
+  color: #cd4649;
 }
 /* //////////////////// Media Queries ///////////////////// */
 

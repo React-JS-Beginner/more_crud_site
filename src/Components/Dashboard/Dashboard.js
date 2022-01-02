@@ -25,8 +25,8 @@ const Dashboard = () => {
             <div className="pt-3">
               <Nav className="d-grid me-auto">
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/yourorders`}
                 >
                   <div className="icons">
@@ -36,8 +36,8 @@ const Dashboard = () => {
                 </NavLink>
 
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/payment`}
                 >
                   <div className="icons">
@@ -47,8 +47,8 @@ const Dashboard = () => {
                 </NavLink>
 
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/addreview`}
                 >
                   <div className="icons">
@@ -58,8 +58,8 @@ const Dashboard = () => {
                 </NavLink>
 
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/addnewproduct`}
                 >
                   <div className="icons">
@@ -69,8 +69,8 @@ const Dashboard = () => {
                 </NavLink>
 
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/manageallproducts`}
                 >
                   <div className="icons">
@@ -80,8 +80,8 @@ const Dashboard = () => {
                 </NavLink>
 
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/manageallorders`}
                 >
                   <div className="icons">
@@ -91,8 +91,8 @@ const Dashboard = () => {
                 </NavLink>
 
                 <NavLink
-                  activeClassName="dashboard-active"
-                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  activeClassName="dashboard-navText-active"
+                  className="dashboard-navText mb-3 text-decoration-none text-uppercase"
                   to={`${url}/makeadmin`}
                 >
                   <div className="icons">
