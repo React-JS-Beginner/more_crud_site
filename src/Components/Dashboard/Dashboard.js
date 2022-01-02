@@ -29,7 +29,7 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/yourorders`}
                 >
-                  <i class="fas fa-shopping-cart"></i> Your Orders
+                  <div className="icons"><i class="fas fa-shopping-cart"></i></div> <span>Your Orders</span>
                 </NavLink>
 
                 <NavLink
@@ -37,7 +37,7 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/payment`}
                 >
-                  <i class="fas fa-dollar-sign"></i> Payment
+                  <div className="icons"><i class="fas fa-dollar-sign"></i></div> <span>Payment</span>
                 </NavLink>
 
                 <NavLink
@@ -45,42 +45,40 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/addreview`}
                 >
-                  <i class="far fa-comment-alt"></i> Add Review
+                  <div className="icons"><i class="far fa-comment-alt"></i></div> <span>Add Review</span>
                 </NavLink>
 
-                <Nav>
-                  <NavLink
-                    activeClassName="dashboard-active"
-                    className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
-                    to={`${url}/addnewproduct`}
-                  >
-                   <i class="fas fa-plus-square"></i> Add New Product
-                  </NavLink>
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  to={`${url}/addnewproduct`}
+                >
+                  <div className="icons"><i class="fas fa-plus-square"></i></div> <span>Add New Product</span>
+                </NavLink>
 
-                  <NavLink
-                    activeClassName="dashboard-active"
-                    className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
-                    to={`${url}/manageallproducts`}
-                  >
-                    <i class="fas fa-gem"></i> Manage All Products
-                  </NavLink>
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  to={`${url}/manageallproducts`}
+                >
+                  <div className="icons"><i class="fas fa-gem"></i></div> <span>Manage All Products</span>
+                </NavLink>
 
-                  <NavLink
-                    activeClassName="dashboard-active"
-                    className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
-                    to={`${url}/manageallorders`}
-                  >
-                    Manage All Orders
-                  </NavLink>
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  to={`${url}/manageallorders`}
+                >
+                  <div className="icons"><i class="fas fa-dolly"></i></div> <span>Manage All Orders</span>
+                </NavLink>
 
-                  <NavLink
-                    activeClassName="dashboard-active"
-                    className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
-                    to={`${url}/makeadmin`}
-                  >
-                    Make Admin
-                  </NavLink>
-                </Nav>
+                <NavLink
+                  activeClassName="dashboard-active"
+                  className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
+                  to={`${url}/makeadmin`}
+                >
+                  <div className="icons"><i class="fas fa-user"></i></div> <span>Make Admin</span>
+                </NavLink>
               </Nav>
             </div>
           </Col>

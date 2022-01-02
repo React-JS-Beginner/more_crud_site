@@ -3,20 +3,28 @@
   color: #c7ad8b;
   text-align: center;
 }
-
+.icons {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 hr.new {
   border: 1px solid #c7ad8b;
 }
 
 .side-menu {
-  background-color: #f1d7b5;
+  background-color: #c7ad8b;
   color: white;
   font-weight: bold;
 }
 
-.dashboard-navText  {
+.dashboard-navText {
   color: #ffffff;
   font-size: 12px;
+  display: flex;
+  align-items: center;
 }
 .dashboard:hover {
   color: #ffffff;
