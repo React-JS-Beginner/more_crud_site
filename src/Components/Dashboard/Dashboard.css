@@ -1,4 +1,4 @@
-.dashboard {
+.dashboard-text {
   font-size: 30px;
   color: #c7ad8b;
   text-align: center;
@@ -12,6 +12,20 @@ hr.new {
   background-color: #f1d7b5;
   color: white;
   font-weight: bold;
+}
+
+.dashboard-font {
+  font-size: 12px;
+}
+.dashboard-navText  {
+  color: #ffffff;
+  font-size: 12px;
+}
+.dashboard:hover {
+  color: #ffffff;
+}
+.dashboard-active {
+  color: #ffffff;
 }
 /* //////////////////// Media Queries ///////////////////// */
 
