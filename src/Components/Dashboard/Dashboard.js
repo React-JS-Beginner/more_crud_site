@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import YourOrders from "./YourOrders/YourOrders";
 import AddReview from "./AddReview/AddReview";
 import AddNewProduct from "./AddNewProduct/AddNewProduct";
@@ -32,7 +32,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="fas fa-shopping-cart"></i>
                   </div>{" "}
-                  <span>Your Orders</span>
+                  <span className="d-navText">Your Orders</span>
                 </NavLink>
 
                 <NavLink
@@ -43,7 +43,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="fas fa-dollar-sign"></i>
                   </div>{" "}
-                  <span>Payment</span>
+                  <span className="d-navText">Payment</span>
                 </NavLink>
 
                 <NavLink
@@ -54,7 +54,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="far fa-comment-alt"></i>
                   </div>{" "}
-                  <span>Add Review</span>
+                  <span className="d-navText">Add Review</span>
                 </NavLink>
 
                 <NavLink
@@ -65,7 +65,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="fas fa-plus-square"></i>
                   </div>{" "}
-                  <span>Add New Product</span>
+                  <span className="d-navText">Add New Product</span>
                 </NavLink>
 
                 <NavLink
@@ -76,7 +76,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="fas fa-gem"></i>
                   </div>{" "}
-                  <span>Manage All Products</span>
+                  <span className="d-navText">Manage All Products</span>
                 </NavLink>
 
                 <NavLink
@@ -87,7 +87,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="fas fa-dolly"></i>
                   </div>{" "}
-                  <span>Manage All Orders</span>
+                  <span className="d-navText">Manage All Orders</span>
                 </NavLink>
 
                 <NavLink
@@ -98,7 +98,7 @@ const Dashboard = () => {
                   <div className="icons">
                     <i class="fas fa-user"></i>
                   </div>{" "}
-                  <span>Make Admin</span>
+                  <span className="d-navText">Make Admin</span>
                 </NavLink>
               </Nav>
             </div>
