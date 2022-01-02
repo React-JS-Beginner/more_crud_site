@@ -22,15 +22,14 @@ const Dashboard = () => {
       <Container className="mt-2">
         <Row>
           <Col xl={2} lg={2} className="side-menu">
-            <p className="text-center pt-3">Side Menu</p>
-            <div className="pt-5 px-2">
+            <div className="pt-3">
               <Nav className="d-grid me-auto">
                 <NavLink
                   activeClassName="dashboard-active"
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/yourorders`}
                 >
-                  Your Orders
+                  <i class="fas fa-shopping-cart"></i> Your Orders
                 </NavLink>
 
                 <NavLink
@@ -38,7 +37,7 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/payment`}
                 >
-                  Payment
+                  <i class="fas fa-dollar-sign"></i> Payment
                 </NavLink>
 
                 <NavLink
@@ -46,7 +45,7 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/addreview`}
                 >
-                  Add Review
+                  <i class="far fa-comment-alt"></i> Add Review
                 </NavLink>
 
                 <Nav>
@@ -55,7 +54,7 @@ const Dashboard = () => {
                     className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                     to={`${url}/addnewproduct`}
                   >
-                    Add New Product
+                   <i class="fas fa-plus-square"></i> Add New Product
                   </NavLink>
 
                   <NavLink
@@ -63,7 +62,7 @@ const Dashboard = () => {
                     className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                     to={`${url}/manageallproducts`}
                   >
-                    Manage All Products
+                    <i class="fas fa-gem"></i> Manage All Products
                   </NavLink>
 
                   <NavLink
