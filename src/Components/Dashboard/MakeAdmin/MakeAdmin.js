@@ -3,7 +3,7 @@ import React from 'react';
 const MakeAdmin = () => {
     return (
         <div>
-            <h3 className="text-dark text-center">Make Admin</h3>
+            <h4 className="text-uppercase text-dark text-center">Make Admin</h4>
         </div>
     );
 };

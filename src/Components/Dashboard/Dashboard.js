@@ -18,10 +18,10 @@ const Dashboard = () => {
       <div className="dashboard-text pt-4">
         <span className="text-uppercase">DashBoard</span>
       </div>
-      <hr className="new" />
+      <hr className="new mb-4" />
       <Container className="mt-2">
         <div className="d-flex">
-          <div className="side-menu">
+          <div className="side-menu px-3">
             <div className="pt-3">
               <Nav className="d-grid me-auto">
                 <NavLink

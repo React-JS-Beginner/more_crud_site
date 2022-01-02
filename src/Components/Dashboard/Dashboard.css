@@ -18,8 +18,7 @@ hr.new {
   background-color: #c7ad8b;
   color: white;
   font-weight: bold;
-  width: 250px;
-  border: 2px goldenrod solid;
+  width: 280px;
 }
 
 .dashboard-navText {
@@ -37,5 +36,4 @@ hr.new {
 /* //////////////////// Media Queries ///////////////////// */
 
 @media all and (max-width: 688px) {
-  
 }

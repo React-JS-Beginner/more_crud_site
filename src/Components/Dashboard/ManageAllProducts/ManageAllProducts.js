@@ -3,7 +3,7 @@ import React from 'react';
 const ManageAllProducts = () => {
     return (
         <div>
-            <h3 className="text-dark text-center">Manage All Products</h3>
+            <h4 className="text-uppercase text-dark text-center">Manage All Products</h4>
         </div>
     );
 };
