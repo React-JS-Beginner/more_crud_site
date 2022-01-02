@@ -20,8 +20,8 @@ const Dashboard = () => {
       </div>
       <hr className="new" />
       <Container className="mt-2">
-        <Row>
-          <Col xl={2} lg={2} className="side-menu">
+        <div className="d-flex">
+          <div className="side-menu">
             <div className="pt-3">
               <Nav className="d-grid me-auto">
                 <NavLink
@@ -29,7 +29,10 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/yourorders`}
                 >
-                  <div className="icons"><i class="fas fa-shopping-cart"></i></div> <span>Your Orders</span>
+                  <div className="icons">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>{" "}
+                  <span>Your Orders</span>
                 </NavLink>
 
                 <NavLink
@@ -37,7 +40,10 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/payment`}
                 >
-                  <div className="icons"><i class="fas fa-dollar-sign"></i></div> <span>Payment</span>
+                  <div className="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>{" "}
+                  <span>Payment</span>
                 </NavLink>
 
                 <NavLink
@@ -45,7 +51,10 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/addreview`}
                 >
-                  <div className="icons"><i class="far fa-comment-alt"></i></div> <span>Add Review</span>
+                  <div className="icons">
+                    <i class="far fa-comment-alt"></i>
+                  </div>{" "}
+                  <span>Add Review</span>
                 </NavLink>
 
                 <NavLink
@@ -53,7 +62,10 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/addnewproduct`}
                 >
-                  <div className="icons"><i class="fas fa-plus-square"></i></div> <span>Add New Product</span>
+                  <div className="icons">
+                    <i class="fas fa-plus-square"></i>
+                  </div>{" "}
+                  <span>Add New Product</span>
                 </NavLink>
 
                 <NavLink
@@ -61,7 +73,10 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/manageallproducts`}
                 >
-                  <div className="icons"><i class="fas fa-gem"></i></div> <span>Manage All Products</span>
+                  <div className="icons">
+                    <i class="fas fa-gem"></i>
+                  </div>{" "}
+                  <span>Manage All Products</span>
                 </NavLink>
 
                 <NavLink
@@ -69,7 +84,10 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/manageallorders`}
                 >
-                  <div className="icons"><i class="fas fa-dolly"></i></div> <span>Manage All Orders</span>
+                  <div className="icons">
+                    <i class="fas fa-dolly"></i>
+                  </div>{" "}
+                  <span>Manage All Orders</span>
                 </NavLink>
 
                 <NavLink
@@ -77,49 +95,55 @@ const Dashboard = () => {
                   className="dashboard-navText mb-3 text-white text-decoration-none text-uppercase"
                   to={`${url}/makeadmin`}
                 >
-                  <div className="icons"><i class="fas fa-user"></i></div> <span>Make Admin</span>
+                  <div className="icons">
+                    <i class="fas fa-user"></i>
+                  </div>{" "}
+                  <span>Make Admin</span>
                 </NavLink>
               </Nav>
             </div>
-          </Col>
-          <Col xl={10} lg={10}>
-            <div className="px-5 w-100">
-              <Switch>
-                <Route exact path={path}>
-                  <YourOrders></YourOrders>
-                </Route>
+            {/* 1st div  */}
+          </div>
 
-                <Route exact path={`${path}/yourorders`}>
-                  <YourOrders></YourOrders>
-                </Route>
+          <div className="px-5 w-100">
+            <Switch>
+              <Route exact path={path}>
+                <YourOrders></YourOrders>
+              </Route>
 
-                <Route path={`${path}/addreview`}>
-                  <AddReview></AddReview>
-                </Route>
+              <Route exact path={`${path}/yourorders`}>
+                <YourOrders></YourOrders>
+              </Route>
 
-                <Route path={`${path}/payment`}>
-                  <Payment></Payment>
-                </Route>
+              <Route path={`${path}/addreview`}>
+                <AddReview></AddReview>
+              </Route>
 
-                <Route path={`${path}/addnewproduct`}>
-                  <AddNewProduct></AddNewProduct>
-                </Route>
+              <Route path={`${path}/payment`}>
+                <Payment></Payment>
+              </Route>
 
-                <Route path={`${path}/manageallproducts`}>
-                  <ManageAllProducts></ManageAllProducts>
-                </Route>
+              <Route path={`${path}/addnewproduct`}>
+                <AddNewProduct></AddNewProduct>
+              </Route>
 
-                <Route path={`${path}/manageallorders`}>
-                  <ManageAllOrders></ManageAllOrders>
-                </Route>
+              <Route path={`${path}/manageallproducts`}>
+                <ManageAllProducts></ManageAllProducts>
+              </Route>
 
-                <Route path={`${path}/makeadmin`}>
-                  <MakeAdmin></MakeAdmin>
-                </Route>
-              </Switch>
-            </div>
-          </Col>
-        </Row>
+              <Route path={`${path}/manageallorders`}>
+                <ManageAllOrders></ManageAllOrders>
+              </Route>
+
+              <Route path={`${path}/makeadmin`}>
+                <MakeAdmin></MakeAdmin>
+              </Route>
+            </Switch>
+            {/* 2nd div */}
+          </div>
+
+          {/* main div  */}
+        </div>
       </Container>
     </>
   );
