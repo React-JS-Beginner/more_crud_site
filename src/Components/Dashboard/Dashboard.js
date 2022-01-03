@@ -21,7 +21,7 @@ const Dashboard = () => {
       <hr className="new mb-4" />
       <Container className="mt-2">
         <div className="d-flex">
-          <div className="side-menu px-3 py-5 mb-5">
+          <div className="side-menu d-flex align-items-center px-3 mb-5">
             <Nav className="d-grid me-auto">
               <NavLink
                 activeClassName="dashboard-navText-active"
