@@ -31,7 +31,7 @@ const AddReview = () => {
       </h3>
 
       <Form
-        className="d-flex flex-column mx-auto"
+        className="d-flex flex-column addReview-form mx-auto"
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
