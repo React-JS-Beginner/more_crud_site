@@ -38,10 +38,10 @@ const ManageAllProducts = () => {
 
   return (
     <div className="pb-5">
-      <h3 className="text-center text-uppercase">
+      <h3 className="dashboard-sectionTitle text-center text-uppercase">
         Manage All <span className="text-danger">Products</span>
       </h3>
-      <h5 className="text-center text-uppercase mt-3 mb-4">
+      <h5 className="dashboard-orderTitle text-center text-uppercase mt-3 mb-4">
         Total <strong className="text-danger">{products.length}</strong> product
       </h5>
       <div>

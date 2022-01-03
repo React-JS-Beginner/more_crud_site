@@ -61,10 +61,10 @@ const ManageAllOrders = () => {
 
   return (
     <div className="pb-5 res-table">
-      <h3 className="text-center text-uppercase">
+      <h3 className="dashboard-sectionTitle text-center text-uppercase">
         Manage All <span className="text-danger">orders</span>
       </h3>
-      <h5 className="text-center text-uppercase mt-3 mb-4">
+      <h5 className="dashboard-orderTitle text-center text-uppercase mt-3 mb-4">
         Total <strong className="text-danger">{allorders.length}</strong> orders
       </h5>
       <div className="">
@@ -81,14 +81,24 @@ const ManageAllOrders = () => {
           <tbody>
             {allorders.map((orders) => (
               <tr key={orders._id} orders={orders}>
-                <td className="text-center">{orders.singleProductName} 
-                <br /> 
-                <span className="hidden-price">{orders.singleProductPrice}</span> <br />
-                <span className="hidden-status">{orders.bookedproductStatus}</span>
-                 </td>
-                <td className="text-center price">{orders.singleProductPrice}</td>
+                <td className="text-center">
+                  {orders.singleProductName}
+                  <br />
+                  <span className="hidden-price">
+                    {orders.singleProductPrice}
+                  </span>{" "}
+                  <br />
+                  <span className="hidden-status">
+                    {orders.bookedproductStatus}
+                  </span>
+                </td>
+                <td className="text-center price">
+                  {orders.singleProductPrice}
+                </td>
                 <td className="text-center text-danger">{orders.userName}</td>
-                <td className="text-center status">{orders.bookedproductStatus}</td>
+                <td className="text-center status">
+                  {orders.bookedproductStatus}
+                </td>
                 <td className="text-center">
                   <div className="d-flex">
                     <Button

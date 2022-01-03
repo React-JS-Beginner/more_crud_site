@@ -5,4 +5,10 @@
   .product-model {
     display: none;
   }
+  .dashboard-sectionTitle {
+    font-size: 20px;
+  }
+  .dashboard-orderTitle {
+    font-size: 15px;
+  }
 }

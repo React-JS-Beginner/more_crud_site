@@ -20,4 +20,10 @@
   .hidden-status {
     display: block;
   }
+  .dashboard-sectionTitle {
+    font-size: 20px;
+  }
+  .dashboard-orderTitle {
+    font-size: 15px;
+  }
 }
