@@ -75,7 +75,7 @@ const ManageAllProducts = () => {
                       variant="danger w-75"
                       size="sm"
                     >
-                      Delete
+                      <span className="table-text">Delete</span>
                     </Button>
                   </div>
                 </td>
