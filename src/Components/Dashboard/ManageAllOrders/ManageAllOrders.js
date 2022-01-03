@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
+import "./ManageAllOrders.css";
 
 const ManageAllOrders = () => {
   const [allorders, setAllOrders] = useState([]);
@@ -59,22 +60,22 @@ const ManageAllOrders = () => {
   };
 
   return (
-    <div className="pb-5">
+    <div className="pb-5 res-table">
       <h3 className="text-center text-uppercase">
         Manage All <span className="text-danger">orders</span>
       </h3>
       <h5 className="text-center text-uppercase mt-3 mb-4">
         Total <strong className="text-danger">{allorders.length}</strong> orders
       </h5>
-      <div>
+      <div className="">
         <Table bordered hover>
           <thead className="text-uppercase">
             <tr>
-              <th className="text-center p-3">Drone Name</th>
-              <th className="text-center p-3">Price</th>
-              <th className="text-center p-3">Ordered By</th>
-              <th className="text-center p-3">Status</th>
-              <th className="text-center p-3">Approve / Cancel</th>
+              <th className="table-text text-center p-3">Jewelery Name</th>
+              <th className="table-text text-center p-3">$ <span className="price">Price</span></th>
+              <th className="table-text text-center p-3">Ordered By</th>
+              <th className="table-text status text-center p-3">Status</th>
+              <th className="table-text text-center p-3">Approve / Cancel</th>
             </tr>
           </thead>
           <tbody>

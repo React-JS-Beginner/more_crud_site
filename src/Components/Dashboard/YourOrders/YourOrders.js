@@ -36,7 +36,7 @@ const YourOrders = () => {
   };
 
   return (
-    <Container className="px-5" style={{ height: "800px", overflow: "scroll" }}>
+    <Container className="px-5">
       <div>
         <h3 className="text-center text-uppercase">
           Your <span className="text-danger">orders</span>
