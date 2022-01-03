@@ -43,7 +43,7 @@ const MakeAdmin = () => {
       <Container className="d-flex justify-content-center">
         <form
           onSubmit={handleAdminSubmit}
-          className="mt-5 w-50 d-flex justify-content-center"
+          className="mt-5 d-flex justify-content-center"
         >
           <div className="input-group mb-3">
             <input

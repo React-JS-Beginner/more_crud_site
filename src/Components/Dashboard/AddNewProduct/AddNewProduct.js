@@ -33,7 +33,7 @@ const AddNewProduct = () => {
       </h3>
 
       <Form
-        className="d-flex flex-column w-50 mx-auto"
+        className="d-flex flex-column mx-auto"
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
