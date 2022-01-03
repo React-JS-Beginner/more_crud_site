@@ -72,7 +72,7 @@ const ManageAllOrders = () => {
           <thead className="text-uppercase">
             <tr>
               <th className="table-text text-center p-3">Jewelery Name</th>
-              <th className="table-text text-center p-3">$ <span className="price">Price</span></th>
+              <th className="table-text price text-center p-3">$ Price</th>
               <th className="table-text text-center p-3">Ordered By</th>
               <th className="table-text status text-center p-3">Status</th>
               <th className="table-text text-center p-3">Approve / Cancel</th>
