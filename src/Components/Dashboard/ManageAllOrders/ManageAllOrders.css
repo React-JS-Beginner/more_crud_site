@@ -1,6 +1,9 @@
 .hidden-price {
   display: none;
 }
+.hidden-status {
+  display: none;
+}
 @media all and (max-width: 688px) {
   .table-text {
     font-size: 10px;
@@ -10,5 +13,11 @@
   }
   .price {
     display: none;
+  }
+  .hidden-price {
+    display: block;
+  }
+  .hidden-status {
+    display: block;
   }
 }

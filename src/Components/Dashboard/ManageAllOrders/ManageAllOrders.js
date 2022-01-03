@@ -81,7 +81,11 @@ const ManageAllOrders = () => {
           <tbody>
             {allorders.map((orders) => (
               <tr key={orders._id} orders={orders}>
-                <td className="text-center">{orders.singleProductName} <br /> <span className="hidden-price">{orders.singleProductPrice}</span> </td>
+                <td className="text-center">{orders.singleProductName} 
+                <br /> 
+                <span className="hidden-price">{orders.singleProductPrice}</span> <br />
+                <span className="hidden-status">{orders.bookedproductStatus}</span>
+                 </td>
                 <td className="text-center price">{orders.singleProductPrice}</td>
                 <td className="text-center text-danger">{orders.userName}</td>
                 <td className="text-center status">{orders.bookedproductStatus}</td>
