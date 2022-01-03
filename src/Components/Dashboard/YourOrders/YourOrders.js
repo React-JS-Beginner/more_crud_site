@@ -48,7 +48,7 @@ const YourOrders = () => {
           total <strong className="text-danger">{orders.length}</strong> orders
         </h5>
       </div>
-      <Row className="g-4">
+      {/* <Row className="g-4">
         {orders.map((order) => (
           <Col key={order._id} xl={4} lg={4}>
             <Card>
@@ -89,7 +89,106 @@ const YourOrders = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
+      <Container>
+        <>
+          <Card border="primary">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Primary Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="secondary">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Secondary Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="success">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Success Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="danger">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Danger Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="warning">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Warning Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="info">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Info Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="dark">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Dark Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+
+          <Card border="light">
+            <Card.Header>Header</Card.Header>
+            <Card.Body>
+              <Card.Title>Light Card Title</Card.Title>
+              <Card.Text>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <br />
+        </>
+      </Container>
     </Container>
   );
 };
