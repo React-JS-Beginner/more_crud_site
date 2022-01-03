@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
+import "./YourOrders.css";
 
 const YourOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -38,14 +39,14 @@ const YourOrders = () => {
   return (
     <Container className="px-5">
       <div>
-        <h3 className="text-center text-uppercase">
+        <h3 className="dashboard-sectionTitle text-center text-uppercase">
           Your <span className="text-danger">orders</span>
         </h3>
       </div>
       <div>
-        <p className="fs-5 text-center text-dark mb-4 text-uppercase">
+        <h5 className="dashboard-orderTitle text-center text-dark mb-4 text-uppercase">
           total <strong className="text-danger">{orders.length}</strong> orders
-        </p>
+        </h5>
       </div>
       <Row className="g-4">
         {orders.map((order) => (
