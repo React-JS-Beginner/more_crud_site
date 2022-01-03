@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Table } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import "./ManageAllProducts.css";
 
 const ManageAllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -47,19 +48,21 @@ const ManageAllProducts = () => {
         <Table bordered hover>
           <thead className="text-uppercase">
             <tr>
-              <th className="text-center p-3">Product Name</th>
-              <th className="text-center p-3">Product Model</th>
-              <th className="text-center p-3">Price</th>
-              <th className="text-center p-3">Delete</th>
+              <th className="table-text text-center p-3">Name</th>
+              <th className="table-text product-model text-center p-3">
+                Product Model
+              </th>
+              <th className="table-text text-center p-3">Price</th>
+              <th className="table-text text-center p-3">Delete</th>
             </tr>
           </thead>
           <tbody>
             {products.map((product) => (
               <tr key={product._id} product={product}>
-                <td className="text-center">{product.productName}</td>
-                <td className="text-center">{product.productModel}</td>
-                <td className="text-center">{product.productPrice}</td>
-                <td className="text-center">
+                <td className="table-text text-center">{product.productName}</td>
+                <td className="text-center product-model">{product.productModel}</td>
+                <td className="table-text text-center">{product.productPrice}</td>
+                <td className="table-text text-center">
                   <div className="text-center">
                     <Button
                       onClick={() => deleteHandler(product._id)}
