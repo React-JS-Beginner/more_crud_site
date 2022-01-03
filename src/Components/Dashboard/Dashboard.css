@@ -4,11 +4,12 @@
   text-align: center;
 }
 .icons {
-  height: 28px;
-  width: 28px;
+  height: 15px;
+  width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 15px;
 }
 hr.new {
   border: 1px solid #c7ad8b;
