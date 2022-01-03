@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch("https://secret-garden-17818.herokuapp.com/allorders")
+    fetch("https://morning-badlands-81993.herokuapp.com/allorders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, [reload]);
@@ -20,7 +20,7 @@ const ManageAllOrders = () => {
     );
     if (proceed) {
       setStatus(status);
-      fetch(`https://secret-garden-17818.herokuapp.com/updateStatus/${id}`, {
+      fetch(`https://morning-badlands-81993.herokuapp.com/updateStatus/${id}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ status }),
@@ -42,7 +42,7 @@ const ManageAllOrders = () => {
       "Are you sure, you want to delete this order?"
     );
     if (proceed) {
-      fetch(`https://secret-garden-17818.herokuapp.com/allorders/${id}`, {
+      fetch(`https://morning-badlands-81993.herokuapp.com/allorders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

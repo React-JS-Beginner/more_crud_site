@@ -9,7 +9,7 @@ const AddReview = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://secret-garden-17818.herokuapp.com/reviews", data)
+      .post("https://morning-badlands-81993.herokuapp.com/reviews", data)
       .then((res) => {
         if (res.data.insertedId) {
           reset();
